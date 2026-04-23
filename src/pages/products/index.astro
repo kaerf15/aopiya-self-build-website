@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const products = await getCollection('products');
+---
+
+<Layout title="Collection — Aopiya">
+  <section class="pt-32 pb-20 px-6 bg-bg">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-xs font-medium tracking-[0.25em] uppercase text-accent mb-4">The Collection</p>
+        <h1 class="font-display text-5xl font-normal mb-4">All Pieces</h1>
+        <p class="text-ink-secondary font-light max-w-lg mx-auto">Every piece is made to order by a single artisan. Please allow 2-3 weeks for crafting and shipping.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {products.map(product => (
+          <a href={`/products/${product.data.slug}`} class="group cursor-pointer no-underline text-ink">
+            <div class="relative aspect-[3/4] overflow-hidden bg-bg-warm mb-6">
+              <img src={product.data.images[0]} alt={product.data.name} loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <span class="absolute top-4 left-4 text-xs tracking-widest uppercase px-3 py-1.5 bg-ink/80 text-white">
+                {product.data.inStock ? 'In Stock' : 'Sold Out'}
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-medium mb-1">{product.data.name}</h3>
+            <p class="text-[0.9375rem] text-ink-secondary font-light">${product.data.price}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

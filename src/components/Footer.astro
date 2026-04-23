@@ -1,0 +1,36 @@
+---
+const shopLinks = ['All Bags', 'Wallets', 'Accessories', 'Gift Cards'];
+const companyLinks = ['Our Story', 'Artisans', 'Sustainability', 'Careers'];
+const supportLinks = ['Shipping & Returns', 'Care Guide', 'FAQ', 'Contact'];
+---
+
+<footer class="bg-ink text-white/50 px-6 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-4 gap-12 mb-16">
+    <div class="col-span-1">
+      <a href="/" class="font-display text-2xl font-semibold text-white no-underline block mb-4">Aopiya</a>
+      <p class="text-sm leading-relaxed max-w-xs">Handcrafted leather goods from Guangzhou, shipped worldwide. Each piece carries the mark of human hands and the patience of time.</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-medium tracking-widest uppercase text-white mb-5">Shop</h4>
+      <ul class="list-none">
+        {shopLinks.map(link => <li class="mb-2.5"><a href="#" class="text-sm text-white/50 no-underline hover:text-accent-light transition-colors">{link}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-xs font-medium tracking-widest uppercase text-white mb-5">Company</h4>
+      <ul class="list-none">
+        {companyLinks.map(link => <li class="mb-2.5"><a href="#" class="text-sm text-white/50 no-underline hover:text-accent-light transition-colors">{link}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-xs font-medium tracking-widest uppercase text-white mb-5">Support</h4>
+      <ul class="list-none">
+        {supportLinks.map(link => <li class="mb-2.5"><a href="#" class="text-sm text-white/50 no-underline hover:text-accent-light transition-colors">{link}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex justify-between text-sm">
+    <p>&copy; 2026 Aopiya. All rights reserved.</p>
+    <p>Handcrafted in Guangzhou &middot; Shipped Worldwide</p>
+  </div>
+</footer>

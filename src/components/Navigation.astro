@@ -1,0 +1,23 @@
+---
+const links = [
+  { href: '/products', label: 'Collection' },
+  { href: '/blog', label: 'Journal' },
+  { href: '/about', label: 'About' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-bg/92 backdrop-blur-md border-b border-border">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="font-display text-2xl font-semibold tracking-widest text-ink no-underline">Aopiya</a>
+    <ul class="flex gap-10 list-none">
+      {links.map(link => (
+        <li>
+          <a href={link.href} class="text-sm font-normal tracking-wide text-ink-secondary no-underline hover:text-primary transition-colors relative group">
+            {link.label}
+            <span class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

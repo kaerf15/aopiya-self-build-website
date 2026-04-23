@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sorted = posts
+  .filter(p => p.data.published)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+---
+
+<Layout title="Journal — Aopiya" description="Stories of craft, place, and the people who make it possible.">
+  <section class="pt-32 pb-20 px-6 bg-bg">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-xs font-medium tracking-[0.25em] uppercase text-accent mb-4">The Journal</p>
+        <h1 class="font-display text-5xl font-normal mb-4">Stories Worth Telling</h1>
+        <p class="text-ink-secondary font-light max-w-lg mx-auto">Behind every piece is a story — of craft, of place, of the people who make it possible.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {sorted.map(post => (
+          <a href={`/blog/${post.data.slug}`} class="group cursor-pointer no-underline text-ink">
+            <div class="aspect-[16/10] overflow-hidden bg-bg-warm mb-5">
+              <img src={post.data.coverImage} alt={post.data.title} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
+            </div>
+            <p class="text-xs text-ink-muted tracking-wide mb-2">{formatDate(post.data.date)} · {post.data.category}</p>
+            <h3 class="font-display text-lg font-medium leading-snug transition-colors group-hover:text-primary">{post.data.title}</h3>
+            <p class="text-sm text-ink-secondary font-light mt-2 line-clamp-2">{post.data.summary}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
