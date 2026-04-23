@@ -1,6 +1,6 @@
 ---
-const shopLinks = ['All Bags', 'Wallets', 'Accessories', 'Gift Cards'];
-const companyLinks = ['Our Story', 'Artisans', 'Sustainability', 'Careers'];
+const brandLinks = ['SUSEN', 'Chrisbella', 'BAGCO'];
+const companyLinks = ['Our Story', 'Atelier', 'Sustainability', 'Careers'];
 const supportLinks = ['Shipping & Returns', 'Care Guide', 'FAQ', 'Contact'];
 ---
 
@@ -8,12 +8,12 @@ const supportLinks = ['Shipping & Returns', 'Care Guide', 'FAQ', 'Contact'];
   <div class="max-w-7xl mx-auto grid grid-cols-4 gap-12 mb-16">
     <div class="col-span-1">
       <a href="/" class="font-display text-2xl font-semibold text-white no-underline block mb-4">Aopiya</a>
-      <p class="text-sm leading-relaxed max-w-xs">Handcrafted leather goods from Guangzhou, shipped worldwide. Each piece carries the mark of human hands and the patience of time.</p>
+      <p class="text-sm leading-relaxed max-w-xs">Guangzhou-based leather goods group. 25 years of manufacturing excellence, now shaping brands of our own. Shipped to 100+ countries.</p>
     </div>
     <div>
-      <h4 class="text-xs font-medium tracking-widest uppercase text-white mb-5">Shop</h4>
+      <h4 class="text-xs font-medium tracking-widest uppercase text-white mb-5">Brands</h4>
       <ul class="list-none">
-        {shopLinks.map(link => <li class="mb-2.5"><a href="#" class="text-sm text-white/50 no-underline hover:text-accent-light transition-colors">{link}</a></li>)}
+        {brandLinks.map(link => <li class="mb-2.5"><a href="#" class="text-sm text-white/50 no-underline hover:text-accent-light transition-colors">{link}</a></li>)}
       </ul>
     </div>
     <div>
@@ -31,6 +31,6 @@ const supportLinks = ['Shipping & Returns', 'Care Guide', 'FAQ', 'Contact'];
   </div>
   <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex justify-between text-sm">
     <p>&copy; 2026 Aopiya. All rights reserved.</p>
-    <p>Handcrafted in Guangzhou &middot; Shipped Worldwide</p>
+    <p>Guangzhou, China &middot; 100+ Countries</p>
   </div>
 </footer>
