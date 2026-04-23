@@ -6,7 +6,7 @@ category: "Bags"
 material: "Full-grain vegetable-tanned leather"
 dimensions: "45 × 30 × 20 cm"
 images:
-  - "/images/product-1.jpg"
+  - "/images/product-1.png"
 inStock: true
 featured: true
 description: "A spacious travel companion handcrafted from premium Italian leather. Designed to age beautifully with every journey."

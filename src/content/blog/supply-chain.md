@@ -4,7 +4,7 @@ slug: "supply-chain"
 date: 2026-02-28
 category: "Sourcing"
 tags: ["sourcing", "italy", "transparency"]
-coverImage: "/images/journal-2.jpg"
+coverImage: "/images/journal-2.png"
 summary: "The journey of our leather from Italian tanneries to our Guangzhou atelier — every step, every hand."
 published: true
 author: "Aopiya Studio"

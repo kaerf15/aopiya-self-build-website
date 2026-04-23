@@ -6,7 +6,7 @@ category: "Wallets"
 material: "Full-grain vegetable-tanned leather"
 dimensions: "11 × 9 × 1 cm"
 images:
-  - "/images/product-3.jpg"
+  - "/images/product-3.png"
 inStock: true
 featured: true
 description: "Slim, considered, and built to slip into any pocket. A daily reminder that less is more."

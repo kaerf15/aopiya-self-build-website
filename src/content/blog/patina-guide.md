@@ -4,7 +4,7 @@ slug: "patina-guide"
 date: 2026-03-12
 category: "Care Guide"
 tags: ["patina", "care", "aging"]
-coverImage: "/images/journal-1.jpg"
+coverImage: "/images/journal-1.png"
 summary: "Discover how vegetable-tanned leather develops a unique character over time, telling the story of every journey."
 published: true
 author: "Aopiya Studio"

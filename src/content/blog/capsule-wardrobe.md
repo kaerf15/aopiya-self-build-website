@@ -4,7 +4,7 @@ slug: "capsule-wardrobe"
 date: 2026-01-15
 category: "Lifestyle"
 tags: ["minimalism", "wardrobe", "essentials"]
-coverImage: "/images/journal-3.jpg"
+coverImage: "/images/journal-3.png"
 summary: "How three carefully chosen leather pieces can replace an entire shelf of accessories."
 published: true
 author: "Aopiya Studio"

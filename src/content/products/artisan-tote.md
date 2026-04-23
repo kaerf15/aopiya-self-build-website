@@ -6,7 +6,7 @@ category: "Bags"
 material: "Full-grain vegetable-tanned leather"
 dimensions: "38 × 32 × 12 cm"
 images:
-  - "/images/product-2.jpg"
+  - "/images/product-2.png"
 inStock: true
 featured: true
 description: "The everyday essential. Minimal, structured, and built to carry your world with quiet confidence."
